@@ -19,7 +19,7 @@
             v-bind:class="{'is-complete':todo.completed}"
             >
                 {{ todo.title }}
-                <i @click="deleteTodo(todo.id)" class="fa fa-trash-alt"></i>
+                <i @click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i>
             </div>
         </div>
     </div>
@@ -43,20 +43,20 @@ export default {
         }
     },
     computed: mapGetters(["allTodos"]),
-    created(){
+    created() {
         this.fetchTodos();
     }
 };
 </script>
 
 <style scoped>
-    .todos{
+    .todos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
     }
 
-    .todo{
+    .todo {
         border: 1px solid #ccc;
         background: #41b883;
         padding: 1rem;
